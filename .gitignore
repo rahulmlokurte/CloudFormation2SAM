@@ -2,4 +2,4 @@ venv
 build
 cfn2sam.egg-info
 .idea
-cfn2sam/__pycache__
+cfn2sam/__pycache__/*

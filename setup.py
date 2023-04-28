@@ -7,6 +7,7 @@ path.abspath(path.dirname(__file__))
 with open("README.md", encoding="utf-8") as f:
     long_description = f.read()
 
+packages = find_packages()
 
 setup(
     name='cfn2sam',
@@ -16,13 +17,13 @@ setup(
     author='Rahul Lokurte',
     author_email='rahul.m.lokurte@gmail.com',
     url='https://github.com/rahulmlokurte/CloudFormation2SAM',
-    packages=['cfn2sam'],
+    packages=packages,
     entry_points={
         'console_scripts': [
             'cfn2sam = cfn2sam.cli:main',
         ],
     },
     install_requires=[
-        'PyYAML==6.0', 'boto3==1.26.120'
+        'PyYAML==6.0', 'boto3==1.26.120', 'PyYAML==6.0'
     ],
 )
